@@ -115,6 +115,23 @@ $(document).ready(function () {
         tdStartDate.text(currentDatabase.startDate);
         newRow.append(tdStartDate);
 
+        var tdMonths = $("<td>");
+        var totalMonthsWorked = moment().diff(moment(currentDatabase.startDate), 'months');
+        tdMonths.text(totalMonthsWorked);
+        newRow.append(tdMonths);
+
+        var tdMonthlyRate = $("<td>");
+        tdMonthlyRate.text(currentDatabase.monthlyRate);
+        newRow.append(tdMonthlyRate);
+
+        var tdTotalBilled = $("<td>");
+        var totalBilled = totalMonthsWorked*currentDatabase.monthlyRate;
+        tdTotalBilled.text(totalBilled);
+        newRow.append(tdTotalBilled);
+
+
+
+    
 
 
         // Handle the errors
