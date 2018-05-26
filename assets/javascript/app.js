@@ -25,8 +25,8 @@ $(document).ready(function () {
             seeEmployeeContainer.show();
         }
     });
-
-
+   
+   // firebase database
     var config = {
         apiKey: "AIzaSyCWTt0IfvbOLlGSg7Kgj6IN4JfNA5Brje0",
         authDomain: "myproject-49aba.firebaseapp.com",
@@ -37,4 +37,18 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
+    
+    
+    database.ref()
+
+    dateAdded: firebase.database.serverValue(TIMESTAMP)
+
+
+    .orderBychild("dateAdded").limitToLast(1).on("child_added"),function(snapshot){
+
+        var sv = snapshot.val();
+
+        console.log();
+
+    }
 })
