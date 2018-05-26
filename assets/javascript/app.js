@@ -37,12 +37,37 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
+    var datasbase = firebase.database();
     
+    var name = "";
+    var email = "";
+    var age = 0;
+    var comment = "";
     
     database.ref()
 
     dateAdded: firebase.database.serverValue(TIMESTAMP)
 
+
+    $("#addEmployee").on("click", function(event){
+
+     event.preventDefault();
+
+      name = $()
+      email = $()
+      age = 0;
+      comment = $()
+
+
+     database.ref().push({
+        name: name,
+        email: email,
+        age: age,
+        comment: comment,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
+      });
+   
+    })
 
     .orderBychild("dateAdded").limitToLast(1).on("child_added"),function(snapshot){
 
