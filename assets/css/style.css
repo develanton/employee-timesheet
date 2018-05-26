@@ -1,0 +1,12 @@
+.navbar-item img {
+    max-height: 4rem;
+}
+
+.hero.is-small .hero-body {
+    padding-bottom: 3.5rem;
+    padding-top: 1rem;
+}
+
+label.checkbox:not(:first-child) {
+    margin-left: 15px;
+}
