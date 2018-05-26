@@ -52,7 +52,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         name = $("#name").val().trim();
-        lastName = $("#last-name").val().trim();
+        lastName = $("#lastnames").val().trim();
         startDate = $("#date").val().trim();
         role = $("#role").val().trim();
         monthlyRate = $("#monthly-rate").val().trim();
