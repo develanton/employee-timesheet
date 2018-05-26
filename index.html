@@ -66,6 +66,35 @@
 
     <!-- See Employee - begin -->
     <div class="container" id="see-employee-container">
+        <div class="box">
+            <h2 class="subtitle">Current employees</h2>
+
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Employee Last Name</th>
+                        <th>Role</th>
+                        <th>Start Date</th>
+                        <th>Months</th>
+                        <th>Monthly Rate ($)</th>
+                        <th>Total Billed ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
 
 
 
@@ -84,7 +113,7 @@
                     <div class="field">
                         <label class="label">Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="John">
+                            <input class="input" type="text" placeholder="John" id="name">
                         </div>
                     </div>
                 </div>
@@ -92,7 +121,7 @@
                     <div class="field">
                         <label class="label">Last Names</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Doe">
+                            <input class="input" type="text" placeholder="Doe" id="lastnames">
                         </div>
                     </div>
                 </div>
@@ -104,25 +133,19 @@
                 <div class="column is-4">
                     <div class="field">
                         <label class="label">Role</label>
-                        <div class="control has-icons-left">
-                            <input class="input" type="text" placeholder="What role is he doing?">
-                        </div>
+                            <input class="input" type="text" placeholder="What role is he doing?" id="role">
                     </div>
                 </div>
                 <div class="column is-4">
                     <div class="field">
                         <label class="label">Date</label>
-                        <div class="control has-icons-left">
-                            <input class="input" type="date" placeholder="When is he starting">
-                        </div>
+                            <input class="input" type="date" placeholder="When is he starting" id="date">
                     </div>
                 </div>
                 <div class="column is-4">
                     <div class="field">
                         <label class="label">Monthly Rate</label>
-                        <div class="control has-icons-left">
-                            <input class="input" type="text" placeholder="$5000">
-                        </div>
+                            <input class="input" type="text" placeholder="$5000" id="monthly-rate">
                     </div>
                 </div>
     
@@ -130,7 +153,11 @@
 
             <div class="field is-grouped is-grouped-right">
                 <div class="control">
+<<<<<<< HEAD
                     <button class="button is-link is-success" id="addEmployee">Add employee</button>
+=======
+                    <button class="button is-link is-success" id="add-employee">Add employee</button>
+>>>>>>> 321ef882798dc5ed61dbb4c89fd1dc5cad5f9a14
                 </div>
             </div>
             
