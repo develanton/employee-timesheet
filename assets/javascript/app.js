@@ -81,7 +81,26 @@ $(document).ready(function () {
     database.ref().on("child_added", function(snapshot) {
         // Log everything that's coming out of snapshot
         console.log(snapshot.val());
+
+        var tableBody = $("#table-body");
         var newRow = $("<tr>");
+        tableBody.append(newRow);
+
+        var tdName = $("<td>");
+        tdName.text(name);
+        newRow.append(tdName);
+
+        var tdLastName = $("<td>");
+        tdLastName.text(lastName);
+        newRow.append(tdLastName);
+
+        var tdRole = $("<td>");
+        tdRole.text(role);
+        newRow.append(tdRole);
+
+        var tdStartDate = $("<td>");
+        tdStartDate.text(startDate);
+        newRow.append(tdStartDate);
 
 
 
