@@ -50,15 +50,15 @@ $(document).ready(function () {
     dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
-    $("#addEmployee").on("click", function (event) {
+    $("#add-employee").on("click", function (event) {
 
         event.preventDefault();
 
-        name = $("#")
-        lastName = $("")
-        startDate = $("")
-        role = $("");
-        montlyRate = $("")
+        name = $("#name").val().trim();
+        lastName = $("#last-name").val().trim();
+        startDate = $("#date").val().trim();
+        role = $("#role").val().trim();
+        monthlyRate = $("#monthly-rate").val().trim();
 
 
         database.ref().push({
@@ -66,7 +66,7 @@ $(document).ready(function () {
             lastName: lastName,
             email: email,
             startDate: startDate,
-            montlyRate: montlyRate,
+            monthlyRate: monthlyRate,
             dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
 
