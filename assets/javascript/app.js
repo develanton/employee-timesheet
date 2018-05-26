@@ -37,13 +37,14 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
-    var datasbase = firebase.database();
+    var database = firebase.database();
 
     var name = "";
     var lastName = "";
     var role = "";
     var startDate = 0;
     var montlyRate = "";
+     // dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
     $("#add-employee").on("click", function (event) {
@@ -51,7 +52,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         name = $("#name").val().trim();
-        lastName = $("#lastnames").val().trim();
+        lastName = $("#last-name").val().trim();
         startDate = $("#date").val().trim();
         role = $("#role").val().trim();
         monthlyRate = $("#monthly-rate").val().trim();
@@ -60,7 +61,7 @@ $(document).ready(function () {
         database.ref().push({
             name: name,
             lastName: lastName,
-            email: email,
+            role: role,
             startDate: startDate,
             monthlyRate: monthlyRate,
             dateAdded: firebase.database.ServerValue.TIMESTAMP
