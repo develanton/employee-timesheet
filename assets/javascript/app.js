@@ -76,4 +76,17 @@ $(document).ready(function () {
     //     console.log();
 
     // }
+
+    // Firebase watcher
+    database.ref().on("child_added", function(snapshot) {
+        // Log everything that's coming out of snapshot
+        console.log(snapshot.val());
+        var newRow = $("<tr>");
+
+
+
+        // Handle the errors
+        }, function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+    });
 })
