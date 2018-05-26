@@ -67,6 +67,17 @@ $(document).ready(function () {
             dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
 
+        name = $("#name").val("");
+        lastName = $("#lastnames").val("");
+        startDate = $("#date").val("");
+        role = $("#role").val("");
+        monthlyRate = $("#monthly-rate").val("");
+
+        addEmployeeContainer.hide();
+        seeEmployeeContainer.show();
+
+        $("#see-employee-list").addClass("is-active");
+        $("#add-employee-list").removeClass("is-active");
     })
 
     // .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
@@ -82,24 +93,26 @@ $(document).ready(function () {
         // Log everything that's coming out of snapshot
         console.log(snapshot.val());
 
+        var currentDatabase = snapshot.val();
+
         var tableBody = $("#table-body");
         var newRow = $("<tr>");
         tableBody.append(newRow);
 
         var tdName = $("<td>");
-        tdName.text(name);
+        tdName.text(currentDatabase.name);
         newRow.append(tdName);
 
         var tdLastName = $("<td>");
-        tdLastName.text(lastName);
+        tdLastName.text(currentDatabase.lastName);
         newRow.append(tdLastName);
 
         var tdRole = $("<td>");
-        tdRole.text(role);
+        tdRole.text(currentDatabase.role);
         newRow.append(tdRole);
 
         var tdStartDate = $("<td>");
-        tdStartDate.text(startDate);
+        tdStartDate.text(currentDatabase.startDate);
         newRow.append(tdStartDate);
 
 
