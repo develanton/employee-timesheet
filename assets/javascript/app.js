@@ -44,9 +44,7 @@ $(document).ready(function () {
     var role = "";
     var startDate = 0;
     var montlyRate = "";
-
-    database.ref()
-
+    
     dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
@@ -67,16 +65,16 @@ $(document).ready(function () {
             email: email,
             startDate: startDate,
             monthlyRate: monthlyRate,
-            //dateAdded: firebase.database.ServerValue.(TIMESTAMP)
+            dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
 
     })
 
-        // .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
+    // .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
 
-        //     var sv = snapshot.val();
+    //     var sv = snapshot.val();
 
-        //     console.log();
+    //     console.log();
 
-        // }
+    // }
 })
