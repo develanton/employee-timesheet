@@ -9,9 +9,9 @@ $(document).ready(function () {
     seeEmployeeContainer.show();
 
     //Function to switch tabs
-    $('.tabs li').on('click', function() {
+    $('.tabs li').on('click', function () {
         var tabClicked = $(this);
-        
+
         if (tabClicked[0].id == "add-employee-list") {
             tabClicked.addClass("is-active");
             $("#see-employee-list").removeClass("is-active");
@@ -25,8 +25,8 @@ $(document).ready(function () {
             seeEmployeeContainer.show();
         }
     });
-   
-   // firebase database
+
+    // firebase database
     var config = {
         apiKey: "AIzaSyCWTt0IfvbOLlGSg7Kgj6IN4JfNA5Brje0",
         authDomain: "myproject-49aba.firebaseapp.com",
@@ -38,42 +38,45 @@ $(document).ready(function () {
     firebase.initializeApp(config);
 
     var datasbase = firebase.database();
-    
+
     var name = "";
-    var email = "";
-    var age = 0;
-    var comment = "";
-    
+    var lastName = "";
+    var role = "";
+    var startDate = 0;
+    var montlyRate = "";
+
     database.ref()
 
     dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
-    $("#add-employee").on("click", function(event){
+    $("#addEmployee").on("click", function (event) {
 
-     event.preventDefault();
+        event.preventDefault();
 
-      name = $()
-      email = $()
-      age = 0;
-      comment = $()
+        name = $("#")
+        lastName = $("")
+        startDate = $("")
+        role = $("");
+        montlyRate = $("")
 
 
-     database.ref().push({
-        name: name,
-        email: email,
-        age: age,
-        comment: comment,
-        dateAdded: firebase.database.ServerValue.TIMESTAMP
-      });
-   
+        database.ref().push({
+            name: name,
+            lastName: lastName,
+            email: email,
+            startDate: startDate,
+            montlyRate: montlyRate,
+            dateAdded: firebase.database.ServerValue.TIMESTAMP
+        });
+
     })
 
-    .orderBychild("dateAdded").limitToLast(1).on("child_added"),function(snapshot){
+        .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
 
-        var sv = snapshot.val();
+            var sv = snapshot.val();
 
-        console.log();
+            console.log();
 
-    }
+        }
 })
