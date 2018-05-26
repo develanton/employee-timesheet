@@ -44,8 +44,6 @@ $(document).ready(function () {
     var role = "";
     var startDate = 0;
     var montlyRate = "";
-    
-    dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
     $("#add-employee").on("click", function (event) {
