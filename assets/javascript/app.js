@@ -49,7 +49,7 @@ $(document).ready(function () {
     dateAdded: firebase.database.serverValue(TIMESTAMP)
 
 
-    $("#addEmployee").on("click", function(event){
+    $("#add-employee").on("click", function(event){
 
      event.preventDefault();
 
