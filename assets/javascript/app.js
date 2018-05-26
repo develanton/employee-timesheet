@@ -67,16 +67,16 @@ $(document).ready(function () {
             email: email,
             startDate: startDate,
             montlyRate: montlyRate,
-            dateAdded: firebase.database.ServerValue.TIMESTAMP
+            //dateAdded: firebase.database.ServerValue.(TIMESTAMP)
         });
 
     })
 
-        .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
+        // .orderBychild("dateAdded").limitToLast(1).on("child_added"), function (snapshot) {
 
-            var sv = snapshot.val();
+        //     var sv = snapshot.val();
 
-            console.log();
+        //     console.log();
 
-        }
+        // }
 })
